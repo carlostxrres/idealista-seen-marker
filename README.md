@@ -39,3 +39,4 @@ Una vez instalado, el script comenzará a funcionar inmediatamente en el sitio w
 - [ ] Allow real-time flagging
 - [ ] Migrate this to a Firefox add-on
 - [ ] Add "reset storage" option
+- [ ] Add "see seen inmuebles" option, showing a list of them with their lastSeen time and allowing the user to revisit them
