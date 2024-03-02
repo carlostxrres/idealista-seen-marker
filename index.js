@@ -7,6 +7,8 @@
 // @author          carlostxrres
 // @match           https://www.idealista.com/*
 // @icon            https://www.google.com/s2/favicons?sz=64&domain=idealista.com
+// @updateURL       https://raw.githubusercontent.com/carlostxrres/idealista-seen-marker/main/index.js
+// @downloadURL     https://raw.githubusercontent.com/carlostxrres/idealista-seen-marker/main/index.js
 // @grant           GM.setValue
 // @grant           GM.getValue
 // @grant           GM.addStyle
