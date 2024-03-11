@@ -18,7 +18,7 @@
   "use strict"
   /* Settings */
   const USER_SETTINGS = {
-    LANGUAGE: "es", // es en
+    LANGUAGE: "es", // es en // navigator.language
   }
 
   /* Global constants */
@@ -106,7 +106,7 @@
     const elapsed = new Date() - new Date(timestamp)
 
     /**
-     * @var unitIndex and adjustedUnitIndex:
+     * @constant unitIndex and adjustedUnitIndex:
      * Identify the first entry where the elapsed time is shorter than the time unit's millisecond
      * value, or fall back to the greatest unit if no such entry exists. Then, adjust to one smaller
      * unit to enrich the information conveyed (e.g., "three days ago" rather than "this week").
