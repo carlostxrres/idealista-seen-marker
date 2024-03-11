@@ -34,8 +34,8 @@
     hour: 1000 * 60 * 60,
     day: 1000 * 60 * 60 * 24,
     week: 1000 * 60 * 60 * 24 * 7,
-    month: 1000 * 60 * 60 * 24 * 7 * 4.35,
-    year: 1000 * 60 * 60 * 24 * 7 * 4.35 * 12,
+    month: 1000 * 60 * 60 * 24 * 7 * 4.34821428571,
+    year: 1000 * 60 * 60 * 24 * 7 * 4.34821428571 * 12,
   }
   const relativeTimeFormat = new Intl.RelativeTimeFormat(
     USER_SETTINGS.LANGUAGE,
