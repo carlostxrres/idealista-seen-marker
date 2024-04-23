@@ -105,17 +105,23 @@
     const timeUnitEntries = Object.entries(timeUnits)
     const elapsed = new Date() - new Date(timestamp)
 
+    const lastUnitIndex = timeUnits.length - 1
+    
     /**
-     * @constant unitIndex and adjustedUnitIndex:
+     * @constant unitIndex
      * Identify the first entry where the elapsed time is shorter than the time unit's millisecond
-     * value, or fall back to the greatest unit if no such entry exists. Then, adjust to one smaller
-     * unit to enrich the information conveyed (e.g., "three days ago" rather than "this week").
-     * Unless the unit determined is the smallest available, to avoid an invalid index of -1.
+     * value, or fall back to the greatest unit if no such entry exists.
      */
     const unitIndex = timeUnitEntries.findIndex(
-      ([, unitMilliseconds], i) =>
-        elapsed < unitMilliseconds || i === timeUnits.length - 1
+      ([, unitMilliseconds], index) => unitMilliseconds > elapsed || index === lastUnitIndex
     )
+
+    /**
+     * @constant adjustedUnitIndex
+     * Adjust to one smaller unit to enrich the information conveyed (e.g., "three days ago" rather
+     * than "this week"). Unless the unit determined is the smallest available, to avoid an invalid
+     * index of -1.
+     */
     const adjustedUnitIndex = Math.max(unitIndex - 1, 0)
 
     const [unit, unitMilliseconds] = timeUnitEntries[adjustedUnitIndex]
