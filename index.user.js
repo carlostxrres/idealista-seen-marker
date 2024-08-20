@@ -105,7 +105,7 @@
     const timeUnitEntries = Object.entries(timeUnits)
     const elapsed = new Date() - new Date(timestamp)
 
-    const lastUnitIndex = timeUnits.length - 1
+    const lastUnitIndex = timeUnitEntries.length - 1
     
     /**
      * @constant unitIndex
